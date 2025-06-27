@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WannaCall</class>
+ <widget class="QMainWindow" name="WannaCall">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>624</width>
+    <height>848</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WannaCall</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow#WannaCall{
+background-color:#f7f7ff;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#body{
+background-color:white;
+border-radius:8px;
+}
+QWidget#toolbar{
+background-color:white;
+border-radius:8px;
+}
+* { color: #1d1d1d; }
+QLabel {
+color: black;
+font-weight:bold;
+background-color: transparent;
+}
+QLineEdit {
+color:black;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #b9b9b9;
+background-color: #f7f7ff;
+}
+QLineEdit:hover {
+color:black;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #a0a0a0;
+background-color: #f7f7ff;
+}
+QLineEdit:disabled{
+color:#B1B1B1;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #b9b9b9;
+background-color:#838383;
+}
+QPushButton {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+}
+QPushButton:hover {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QPushButton:pressed {
+color: #3c4043;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f9fa, stop: 1 #e3e3e3);
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QToolButton {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+}
+QToolButton:hover {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QToolButton:pressed {
+color: #3c4043;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f9fa, stop: 1 #e3e3e3);
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="0">
+     <widget class="QWidget" name="toolbar" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="settingsButton">
+           <property name="minimumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="resources.qrc">
+             <normaloff>:/icons/settings.png</normaloff>:/icons/settings.png</iconset>
+           </property>
+           <property name="toolButtonStyle">
+            <enum>Qt::ToolButtonIconOnly</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QWidget" name="body" native="true">
+      <property name="styleSheet">
+       <string notr="true">QWidget#body{
+background-color:white;
+border-radius:8px;
+}
+* { color: #1d1d1d; }
+QLabel {
+color: black;
+font-weight:bold;
+background-color: transparent;
+}
+QLineEdit {
+color:black;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #b9b9b9;
+background-color: #f7f7ff;
+}
+QLineEdit:hover {
+color:black;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #a0a0a0;
+background-color: #f7f7ff;
+}
+QLineEdit:disabled{
+color:#B1B1B1;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #b9b9b9;
+background-color:#838383;
+}
+QPushButton {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+}
+QPushButton:hover {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QPushButton:pressed {
+color: #3c4043;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f9fa, stop: 1 #e3e3e3);
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QToolButton {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #f8f9fa;
+border-radius: 4px;
+}
+QToolButton:hover {
+color: #3c4043;
+background-color: #f8f9fa;
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}
+QToolButton:pressed {
+color: #3c4043;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f9fa, stop: 1 #e3e3e3);
+border: 1px solid #e3e3e3;
+border-radius: 4px;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QTextBrowser" name="content">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextBrowser#content {
+background-color:transparent;
+border:none;
+}</string>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please insert the IP you would like to bind to. &lt;span style=&quot; color:#ff0004;&quot;&gt;Make sure it is your own device's IP address.&lt;/span&gt; Once selected, you may add your peers' IP that you would like to send your voice data to, and they will receive it once they bind to their own address as well.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="ipLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel#ipLabel {
+color:#1d1d1d;
+background-color:transparent;
+font-weight:bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>My IP Address</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ipLineEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="portLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel#portLabel {
+color:#1d1d1d;
+background-color:transparent;
+font-weight:bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>My Port</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="portLineEdit"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="callButton">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#callButton {
+color:white;
+font-weight:bold;
+border: 1px solid #4d90fe;
+background-color: #357ae8;
+border-radius:2px;
+}
+QPushButton#callButton:hover {
+color:white;
+font-weight:bold;
+border: 1px solid #2f5bb7;
+background-color: #357ae8;
+border-radius:2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Call</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="endButton">
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#endButton {
+color:white;
+font-weight:bold;
+border: 1px solid #8d0000;
+background-color: #8d0000;
+border-radius:2px;
+}
+QPushButton#endButton:hover {
+color:white;
+font-weight:bold;
+border: 1px solid #8d0000;
+background-color: #980202;
+border-radius:2px;
+}
+QPushButton#endButton:pressed {
+color:white;
+font-weight:bold;
+border: 1px solid #b40101;
+background-color: QLinearGradient( x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #8d0000, stop: 1 #980202);
+border-radius:2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>End</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerIPLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel#peerIPLabel {
+color:#1d1d1d;
+background-color:transparent;
+font-weight:bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>Peer IP Address</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerIPLineEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="peerPortLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel#peerPortLabel {
+color:#1d1d1d;
+background-color:transparent;
+font-weight:bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>Peer Port</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="peerPortLineEdit"/>
+          </item>
+          <item>
+           <widget class="QWidget" name="horizontalWidget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addPeerButton">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Add</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="remPeerButton">
+               <property name="minimumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>75</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Remove</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="peersLabel">
+            <property name="text">
+             <string>Peers</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="styleSheet">
+             <string notr="true">QHeaderView::section {
+	color:#1d1d1d;
+	background-color:rgb(210, 210, 217);
+	font-weight:bold;
+	border:none;
+	padding-left:5px;
+}
+
+QTreeWidget#treeWidget {
+	color:#1d1d1d;
+	border-radius:8px;
+	background-color:#f7f7ff;
+}
+QTreeWidget#treeWidget::item:hover {
+	color:#1d1d1d;
+	background-color:rgb(214, 214, 221);
+}
+QTreeWidget#treeWidget::item:selected:active {
+	color:#1d1d1d;
+	font-weight:bold;
+	background-color:rgb(214, 214, 221);
+}</string>
+            </property>
+            <column>
+             <property name="text">
+              <string notr="true">1</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QWidget" name="header" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>130</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>130</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QTextBrowser" name="logo">
+           <property name="maximumSize">
+            <size>
+             <width>130</width>
+             <height>130</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser#logo{
+background-color:transparent;
+color:#1d1d1d;
+border:none;
+}</string>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/icons/peer-to-peer.png&quot; width=&quot;100&quot; height=&quot;100&quot; /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="title">
+           <property name="styleSheet">
+            <string notr="true">QTextBrowser#title{
+background-color:transparent;
+color:#1d1d1d;
+border:none;
+}</string>
+           </property>
+           <property name="html">
+            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;Wanna Call&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:700; font-style:italic;&quot;&gt;Peer to Peer Calling Service&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>624</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

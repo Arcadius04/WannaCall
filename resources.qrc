@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/settings.png</file>
+        <file>icons/peer-to-peer.png</file>
+    </qresource>
+</RCC>
